@@ -1,0 +1,15 @@
+If line starts with -- it is read by program
+format: --<A for animated> <# of frames must be 3 digit> File: [path to Model without extension]
+(the image must be bmp format and have the same name as the Model)
+
+
+//--A 250 File: SurvivalGame\res\Zombie 
+//--A 250 File: SurvivalGame\res\RareZombie
+-- File: SurvivalGame\res\Terrain
+-- File: SurvivalGame\res\Pistol01
+-- File: SurvivalGame\res\ak_09
+-- File: SurvivalGame\res\ak_09
+-- File: SurvivalGame\res\playerTest
+-- File: SurvivalGame\res\bullet
+-- File: SurvivalGame\res\House
+-- File: SurvivalGame\res\Pistol2

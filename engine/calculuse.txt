@@ -1,0 +1,48 @@
+/* OLD STUFF
+	 
+	 for(int i=0;i<planes.size();i++){
+				for(int j=0;j<s.planes.size();j++){
+					
+					
+					Vector3d crossVecP1;
+					Vector3d crossComp1P1 = new Vector3d(0,0,0);
+					Vector3d crossComp2P1 = new Vector3d(0,0,0);
+					
+					
+					Vector3d crossVecP2;
+					Vector3d crossComp1P2 = new Vector3d(0,0,0);
+					Vector3d crossComp2P2 = new Vector3d(0,0,0);
+														
+					if(planes.get(i).getVectors(crossComp1P1, crossComp2P1)){						
+						crossVecP1 = crossComp1P1.cross(crossComp2P1);					
+					}else{
+						return false;
+					}
+					
+					
+					if(s.planes.get(j).getVectors(crossComp1P2, crossComp2P2)){						
+						crossVecP2 = crossComp1P2.cross(crossComp2P2);								
+					}else{
+						return false;
+					}				
+					
+					double D,Dp;
+					Point3d point, pointp;
+					point = new Point3d( planes.get(i).verts[0].x,planes.get(i).verts[0].y,planes.get(i).verts[0].z);
+					pointp = point = new Point3d( s.planes.get(j).verts[0].x,s.planes.get(j).verts[0].y,s.planes.get(j).verts[0].z);					
+					D = crossVecP1.x*point.x + crossVecP1.y*point.y + crossVecP1.z*point.z;
+					Dp = crossVecP2.x*pointp.x + crossVecP2.y*pointp.y + crossVecP2.z*pointp.z;
+					
+					double xCo,yCo,tCo;
+					
+					double yCoE,tCoE,DCoE;					
+					
+					double multiple1 = crossVecP1.x;
+					double multiple2 = crossVecP2.x;
+					yCoE = ((crossVecP1.y*multiple2)-(crossVecP2.y*multiple1));
+					
+					tCoE = ((crossVecP1.z*multiple2)-(crossVecP2.z*multiple1));
+					
+					DCoE = ((D*multiple2) - (Dp*multiple1));					
+				}
+	 
